@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ProjectName" parallel="tests" thread-count="5">
+
+  <test name="Create Leads">
+  <parameter name="features" value="features\login.feature"/>
+  <parameter name="secnaario" value="Create Leads"/>
+    <classes>
+      <class name="com.cucumberFramework.testRunner.TestRunner"/>
+       <class name="com.cucumberFramework.AppTest"/>
+      <class name="com.cucumberFramework.steepDefinations.ServicesHooks">
+      <methods>
+      <include name="Sign In with valid credential"></include>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
